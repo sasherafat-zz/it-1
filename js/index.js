@@ -28,7 +28,7 @@ var LoginModalController = {
             elem = null;
         
         if (!state) {
-            state = 0;
+            state = 1;
         }
         
         if (base.tabsElement) {
