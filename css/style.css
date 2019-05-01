@@ -687,3 +687,15 @@ html {
 .navbar .nav_left {
   float: left;
 }
+
+/* Header */
+header {
+  padding: 65px 0;
+  text-align: center;
+  background: #2c3e50;
+  color: #f3f3f3;
+}
+header a {
+  color: #e74c3c;
+  font-weight: bold !important;
+}
