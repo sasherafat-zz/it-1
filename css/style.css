@@ -11,8 +11,16 @@ body {
   background-color: #cdcdcd;
   margin: 0;
 }
-h1, h2, h3, h4, h5, h6,input, textarea {
+h1, h2, h3, h4, h5, h6,input, textarea, a {
   font-family: iransansdn ,tahoma  !important;
+}
+a {
+  text-decoration: none !important;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 @font-face {
 	font-family: iransansdn;
@@ -646,4 +654,36 @@ html {
   height: 100%;
   z-index: 999999;
   background-image: url(https://basehold.it/i/24);
+}
+
+/* Home Page */
+
+/* Navbar */
+.navbar {
+  position: relative;
+  overflow: hidden;
+  background: #333;
+}
+.navbar li {
+  display: inline-block;
+}
+.navbar li a {
+  color: #f3f3f3;
+  display: block;
+  padding: 10px 15px;
+  font-size: 14px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.navbar li a:hover {
+  background: #111;
+}
+.navbar .nav_right {
+  float: right;
+}
+.navbar .nav_left {
+  float: left;
 }
