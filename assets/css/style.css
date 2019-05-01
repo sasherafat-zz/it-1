@@ -15,8 +15,10 @@ body {
   background-color: #cdcdcd;
   margin: 0;
 }
-h1, h2, h3, h4, h5, h6,input, textarea, a {
-  font-family: iransansdn ,tahoma  !important;
+h1, h2, h3, h4, h5, h6,input, textarea, a, p {
+    font-family: iransansdn ,tahoma  !important;
+    margin: 0;
+    padding: 0;
 }
 a {
   text-decoration: none !important;
@@ -706,6 +708,7 @@ header {
   background-size: cover;
   background-position-y: 15%;
   z-index: 1;
+    margin-bottom: 25px;
 }
 header:before {
   content: '';
@@ -718,8 +721,52 @@ header:before {
 }
 header h1 {
   opacity: 0.9999;
+    line-height: 1.6;
 }
 header a {
   color: #e74c3c;
   font-weight: bold !important;
+}
+
+/* About */
+
+.about {
+    overflow: hidden;
+    position: relative;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.about img {
+    width: 450px;
+    max-width: 100%;
+    float: left;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.about h2 {
+    font-size: 22px;
+    font-weight: bold !important;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.about p {
+    overflow: hidden;
+    position: relative;
+    padding: 0 0 0 25px;
+    text-align: justify;
+    color: #222;
+}
+
+@media(max-width: 900px) {
+    .about img {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+    }
+    .about p {
+        padding: 0 15px !important;
+    }
 }
