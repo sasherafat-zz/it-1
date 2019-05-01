@@ -674,6 +674,7 @@ ul {
   background: #333;
 }
 .navbar li {
+  float: right;
   display: inline-block;
 }
 .navbar li a {
@@ -687,7 +688,7 @@ ul {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.navbar li a:hover {
+.navbar li a:hover, .navbar li a.active {
   background: #111;
 }
 .navbar .nav_right {
@@ -831,4 +832,45 @@ footer {
 
 footer a {
   color: #e74c3c;
+}
+
+/* Panel */
+
+.task_table {
+    margin: auto;
+    position: relative;
+    box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.2);
+    border-collapse: collapse;
+    margin-bottom: 25px;
+}
+
+.task_table th, .task_table td {
+  border: none;
+  border-collapse: collapse;
+  padding: 10px 15px;
+}
+
+.task_table th {
+  background: #333;
+  color: #f3f3f3;
+}
+.task_table td {
+    background: #f5f4f4;
+    color: #222;
+}
+.task_btn {
+    font-size: 12px;
+    padding: 5px 10px;
+}
+.task_btn.not_done {
+    background: #27ae60;
+    color: #f3f3f3;
+}
+.task_btn.done {
+    background: #c0392b;
+    color: #f3f3f3;
+}
+.task_btn.view {
+    background: #34495e;
+    color: #f3f3f3;
 }
