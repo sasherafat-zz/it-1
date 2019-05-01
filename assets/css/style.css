@@ -1,7 +1,11 @@
+/* General Styles */
+
 html {
   box-sizing: border-box;
+  font-size: 16px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -55,6 +59,15 @@ ul {
 		 url('../fonts/ttf/iransansdn.ttf') format('truetype');
 }
 
+.container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Login/Register */
 
 .logmod {
   display: block;
@@ -354,12 +367,6 @@ ul {
   cursor: pointer;
   margin-top: 12px;
   line-height: 48px;
-}
-
-html {
-  font-size: 16px;
-  line-height: 24px;
-  font-family: "Lato", sans-serif;
 }
 
 .btn, .simform__actions .sumbit {
