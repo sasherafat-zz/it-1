@@ -9,6 +9,35 @@
 </head>
 
 <body>
+<?php
+error_reporting( E_ALL );
+
+$dbhost = 'localhost';
+$dbuser = 'inesagra_listcard';
+$dbpass = 'Q5QrNh0llrt3E41P';
+$db = 'inesagra_listcard';
+
+$dbconn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
+
+
+if (isset($_POST['submit']))
+{
+    $Username   = $_POST['Username'];
+    $Password = $_POST['Password'];
+
+
+    $query = ("INSERT INTO UserTbl (username, password) VALUES ('$Username', '$Password')");
+
+if (mysqli_query($dbconn, $query)) {
+    echo "successful";
+} else {
+    echo "Error: " . $query . "<br>" . mysqli_error($dbconn);
+}
+
+mysqli_close($dbconn);
+
+ }
+?>
   <div class="logmod">
   <div class="logmod__wrapper">
     <div class="logmod__container">
@@ -22,21 +51,21 @@
           <span class="logmod__heading-subtitle">اطلاعات شخصیتان را برای <strong>ثبت نام</strong> وارد کنید.</span>
         </div>
         <div class="logmod__form">
-          <form accept-charset="utf-8" action="#" class="simform">
+          <form accept-charset="utf-8" action="#" class="simform" method = "POST">
             <div class="sminputs">
               <div class="input full">
                 <label class="string optional" for="user-name">نام کاربری *</label>
-                <input class="string optional" maxlength="255" id="user-name" placeholder="نام کاربری" type="username" size="50" />
+                <input class="string optional" name="Username" maxlength="255" id="user-name" placeholder="نام کاربری" type="username" size="50" />
               </div>
             </div>
             <div class="sminputs">
-              <div class="input string optional">
-                <label class="string optional" for="user-pw">رمز عبور *</label>
-                <input class="string optional" maxlength="255" id="user-pw" placeholder="رمز عبور" type="text" size="50" />
+			  <div class="input string optional">
+                <label class="string optional" for="user-pw-repeat">تکرار رمز عبور *</label>
+                <input class="string optional" maxlength="255" id="user-pw-repeat" placeholder="تکرار رمز عبور" type="password" size="50" />
               </div>
               <div class="input string optional">
-                <label class="string optional" for="user-pw-repeat">تکرار رمز عبور *</label>
-                <input class="string optional" maxlength="255" id="user-pw-repeat" placeholder="تکرار رمز عبور" type="text" size="50" />
+                <label class="string optional" for="user-pw">رمز عبور *</label>
+                <input class="string optional" name="Password" maxlength="255" id="user-pw" placeholder="رمز عبور" type="password" size="50" />
               </div>
             </div>
             <div class="simform__actions">
@@ -50,17 +79,17 @@
           <span class="logmod__heading-subtitle">نام کاربری و رمزعبور خود را <strong>وارد</strong> کنید.</span>
         </div>
         <div class="logmod__form">
-          <form accept-charset="utf-8" action="#" class="simform">
+          <form accept-charset="utf-8" action="#" class="simform" method = "POST">
             <div class="sminputs">
               <div class="input full">
                 <label class="string optional" for="user-name">نام کاربری *</label>
-                <input class="string optional" maxlength="255" id="user-name" placeholder="نام کاربری" type="username" size="50" />
+                <input class="string optional" name="Username" maxlength="255" id="user-name" placeholder="نام کاربری" type="username" size="50" />
               </div>
             </div>
             <div class="sminputs">
               <div class="input full">
                 <label class="string optional" for="user-pw">رمز عبور *</label>
-                <input class="string optional" maxlength="255" id="user-pw" placeholder="رمزعبور" type="password" size="50" />
+                <input class="string optional" name="Password" maxlength="255" id="user-pw" placeholder="رمزعبور" type="password" size="50" />
               </div>
             </div>
             <div class="simform__actions">
