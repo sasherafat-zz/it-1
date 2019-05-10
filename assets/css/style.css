@@ -147,11 +147,11 @@ ul {
   content: "";
   display: table;
 }
-.logmod__tabs li.current a {
+.logmod__tabs li.current span {
   background: #FFF;
   color: #333;
 }
-.logmod__tabs li a {
+.logmod__tabs li span {
   width: 50%;
   position: relative;
   float: left;
@@ -165,9 +165,6 @@ ul {
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
-}
-.logmod__tabs li a:focus {
-  outline: dotted 1px;
 }
 .logmod__heading {
   text-align: center;
@@ -384,8 +381,8 @@ ul {
   outline-offset: 0;
   font-weight: 400;
   box-shadow: none;
-  min-width: 90px;
   padding: 10px 14px;
+  width: 100%;
 }
 .btn.full, .simform__actions .full.sumbit {
   width: 100%;
