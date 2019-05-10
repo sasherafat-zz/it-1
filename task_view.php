@@ -19,8 +19,6 @@ if(isset($_POST['edit'])) {
     if($title == null || $content == null || $created_at == null || $status === null) {
         $err[] = 'همه فیلدها الزامی است';
     }
-    if($created_at != null && !is_numeric($created_at))
-        $err[] = 'تاریخ اشتباه است';
     if(count($err) == 0) {
         $query = $conn->prepare("update task set title = :title, content = :content, status = :status, created_at = :created_at where id = :task_id");
         $query->bindParam(':title', $title);

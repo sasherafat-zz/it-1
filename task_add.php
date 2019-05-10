@@ -19,8 +19,6 @@ if(isset($_POST['add_task'])) {
     if($title == null || $content == null || $created_at == null || $status === null) {
         $err[] = 'همه فیلدها الزامی است';
     }
-    if($created_at != null && !is_numeric($created_at))
-        $err[] = 'تاریخ اشتباه است';
     if(count($err) == 0) {
         $query = $conn->prepare("insert into task(user_id, title, content, status, created_at) values(:user_id, :title, :content, :status, :created_at)");
         $query->bindParam(':user_id', $user['id']);
