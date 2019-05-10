@@ -11,10 +11,12 @@ if(isset($_POST['add_task'])) {
     $created_at = $_POST['created_at'];
     if(isset($_POST['status']) && $_POST['status'] == 'done')
         $status = 1;
-    else
+    elseif(isset($_POST['status']))
         $status = 0;
+    else
+        $status = null;
     $err = [];
-    if($title == null || $content == null || $created_at == null) {
+    if($title == null || $content == null || $created_at == null || $status === null) {
         $err[] = 'همه فیلدها الزامی است';
     }
     if($created_at != null && !is_numeric($created_at))

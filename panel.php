@@ -4,6 +4,12 @@ $tab = 'dashboard';
 require './bootstrapper.php';
 require './header.php';
 ?>
+<?php
+if(isset($_SESSION['deleted'])) {
+    echo "<div class=\"alert warning\">تسک مورد نظر با موفقیت حذف شد.</div>";
+    unset($_SESSION['deleted']);
+}
+?>
 <!-- Fetch User's Cards -->
 <table class="task_table">
     <tr>

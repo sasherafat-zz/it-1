@@ -898,3 +898,6 @@ footer a {
 .alert.success {
   background: #26A65B;
 }
+.alert.warning {
+  background: #ff3300;
+}
