@@ -59,9 +59,8 @@
                             $query->bindParam(':username', $username);
                             $query->execute();
                             $result = $query->fetchAll(PDO::FETCH_ASSOC);
-                            $finded_user = $result[0];
-                            if(count($result) && $finded_user['password'] == $password) {
-                                $_SESSION["user_id"] = $finded_user['id'];
+                            if(count($result) && $result[0]['password'] == $password) {
+                                $_SESSION["user_id"] = $result[0]['id'];
                                 header('location: ./panel.php');
                             } else
                                 echo '<p>کاربری با مشخصات وارد شده یافت نشد!</p>';
