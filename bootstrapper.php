@@ -13,8 +13,8 @@ error_reporting(E_ALL);
 session_start();
 
 $servername = "localhost";
-$username = "it";
-$password = "it";
+$username = "root";
+$password = "";
 $database = "it";
 
 try {
@@ -28,9 +28,12 @@ try {
         $query->bindParam(':user_id', $user_id);
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
-        $finded_user = $result[0];
         if(count($result)) {
+            $finded_user = $result[0];
             $user = $result[0];
+        } else {
+            unset($_SESSION['user_id']);
+            header('location: ./index.php');
         }
     } elseif(isset($page) && $page == 'panel') {
         header('location: ./index.php');

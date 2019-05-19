@@ -75,18 +75,18 @@
                         <form accept-charset="utf-8" action="./auth.php" class="simform" method="post">
                             <div class="sminputs">
                                 <div class="input full">
-                                    <label class="string optional" for="user-name">نام کاربری *</label>
-                                    <input class="string optional" name="username" maxlength="255" id="user-name" placeholder="نام کاربری" type="username" size="50" />
+                                    <label class="string" for="user-name">نام کاربری *</label>
+                                    <input class="string" name="username" maxlength="255" id="user-name" placeholder="نام کاربری" type="username" size="50" />
                                 </div>
                             </div>
                             <div class="sminputs">
-                                <div class="input string optional">
-                                    <label class="string optional" for="user-pw-repeat">تکرار رمز عبور *</label>
-                                    <input class="string optional" name="re_password" maxlength="255" id="user-pw-repeat" placeholder="تکرار رمز عبور" type="password" size="50" />
+                                <div class="input string">
+                                    <label class="string" for="user-pw-repeat">تکرار رمز عبور *</label>
+                                    <input class="string" name="re_password" maxlength="255" id="user-pw-repeat" placeholder="تکرار رمز عبور" type="password" size="50" />
                                 </div>
-                                <div class="input string optional">
-                                    <label class="string optional" for="user-pw">رمز عبور *</label>
-                                    <input class="string optional" name="password" maxlength="255" id="user-pw" placeholder="رمز عبور" type="password" size="50" />
+                                <div class="input string">
+                                    <label class="string" for="user-pw">رمز عبور *</label>
+                                    <input class="string" name="password" maxlength="255" id="user-pw" placeholder="رمز عبور" type="password" size="50" />
                                 </div>
                             </div>
                             <div class="simform__actions">
@@ -103,14 +103,14 @@
                         <form accept-charset="utf-8" action="./auth.php" class="simform" method = "POST">
                             <div class="sminputs">
                                 <div class="input full">
-                                    <label class="string optional" for="user-name">نام کاربری *</label>
-                                    <input class="string optional" name="username" maxlength="255" id="user-name" placeholder="نام کاربری" type="username" size="50" />
+                                    <label class="string" for="user-name">نام کاربری *</label>
+                                    <input class="string" name="username" maxlength="255" id="user-name" placeholder="نام کاربری" type="username" size="50" />
                                 </div>
                             </div>
                             <div class="sminputs">
                                 <div class="input full">
-                                    <label class="string optional" for="user-pw">رمز عبور *</label>
-                                    <input class="string optional" name="password" maxlength="255" id="user-pw" placeholder="رمزعبور" type="password" size="50" />
+                                    <label class="string" for="user-pw">رمز عبور *</label>
+                                    <input class="string" name="password" maxlength="255" id="user-pw" placeholder="رمزعبور" type="password" size="50" />
                                 </div>
                             </div>
                             <div class="simform__actions">
