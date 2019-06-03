@@ -76,17 +76,17 @@
                             <div class="sminputs">
                                 <div class="input full">
                                     <label class="string" for="user-name">نام کاربری *</label>
-                                    <input class="string" name="username" maxlength="255" id="user-name" placeholder="نام کاربری" type="username" size="50" />
+                                    <input tabindex="1" class="string" name="username" maxlength="255" id="user-name" placeholder="نام کاربری" type="username" size="50" />
                                 </div>
                             </div>
                             <div class="sminputs">
                                 <div class="input string">
                                     <label class="string" for="user-pw-repeat">تکرار رمز عبور *</label>
-                                    <input class="string" name="re_password" maxlength="255" id="user-pw-repeat" placeholder="تکرار رمز عبور" type="password" size="50" />
+                                    <input tabindex="2" class="string" name="re_password" maxlength="255" id="user-pw-repeat" placeholder="تکرار رمز عبور" type="password" size="50" />
                                 </div>
                                 <div class="input string">
                                     <label class="string" for="user-pw">رمز عبور *</label>
-                                    <input class="string" name="password" maxlength="255" id="user-pw" placeholder="رمز عبور" type="password" size="50" />
+                                    <input tabindex="3" class="string" name="password" maxlength="255" id="user-pw" placeholder="رمز عبور" type="password" size="50" />
                                 </div>
                             </div>
                             <div class="simform__actions">
